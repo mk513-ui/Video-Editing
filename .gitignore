@@ -3,5 +3,11 @@ dist
 .DS_Store
 .env
 
-# Ignore the output video from Git but not videos you import into src/.
-out
+# Source footage — too large for Git; each user imports their own
+# Run `npm run make-sdr` after importing to create the SDR copies Studio uses
+public/videos/
+
+# Rendered output — re-render locally with `npx remotion render <Id>`
+out/*
+!out/entri/
+!out/previews/
