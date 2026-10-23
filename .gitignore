@@ -3,11 +3,14 @@ dist
 .DS_Store
 .env
 
-# Source footage — too large for Git; each user imports their own
-# Run `npm run make-sdr` after importing to create the SDR copies Studio uses
+# Source footage — each user imports their own
 public/videos/
 
-# Rendered output — re-render locally with `npx remotion render <Id>`
-out/*
-!out/entri/
-!out/previews/
+# Photos/stills from shoots — each user imports their own
+public/images/
+
+# Rendered output — render locally with `npx remotion render <Id>`
+out/
+
+# Captions — generated locally with `npm run transcribe`
+src/data/captions/
